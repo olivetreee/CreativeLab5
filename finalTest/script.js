@@ -23,6 +23,7 @@ Object with all differences between GC and WC;
 
 function checkColor(color) {
 
+// WHEN SUBMITTING, REMOVE THIS 'IF'
 if ((color.search('#')==0 && color.length==7) || (color.search('#')==-1 && color.length==6)) { // Execute only when color has been input correctly
 		
 	
