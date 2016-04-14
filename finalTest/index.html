@@ -1,0 +1,83 @@
+<head>
+
+<style>
+.google-color {
+	width: 50%;
+	height: 100%;
+	background-color: black;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	z-index: -1;
+}
+
+.wanted-color {
+	width: 50%;
+	height: 100%;
+	background-color: black;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+input, #color-input, #closest-to {
+	background-color: rgba(0,0,0,0.5);
+	color: white;
+	border: none;
+	font-size: 50px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	width: 100%;
+	height: 60px;
+	text-align: center;
+}
+
+input {
+	background: none;
+}
+
+input:focus {
+	outline: none;
+}
+
+#color-input {
+	position: absolute;
+	top: 40%;
+	left: 0;
+}
+
+#closest-to {
+	position: absolute;
+	top: 40%;
+}
+
+.google-color {
+	text-align: center;
+}
+
+</style>
+
+<link href='https://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
+
+</head>
+
+
+<body>
+<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>	
+<script src="script.js"></script>
+
+<p><button onclick="checkColor(document.getElementById('wanted').value)">Check</button></p>
+
+
+
+<div class="wanted-color">
+<p id="color-input"><input type="text" id="wanted" placeholder="type hex code" onKeyUp="checkColor(document.getElementById('wanted').value)"></p>
+</div>
+
+<div class="google-color">
+<p id="closest-to">is closest to <span></span></p>
+</div>
+
+
+</body>
